@@ -452,7 +452,6 @@ function severity(cat, date, byDate) {
   return "op";
 }
 
-const statusSnapshot = {};
 function statusPage() {
   const prefix = "";
   const byDate = Object.fromEntries(entries.map((e) => [e.date, e]));
@@ -476,7 +475,6 @@ function statusPage() {
     return { ...c, bars, cur, pct, bad };
   });
   const majors = comps.filter((c) => c.cur === "major");
-  statusSnapshot.comps = comps;
   const worst = comps.reduce((w, c) => worse(w, c.cur), "op");
   const banner =
     majors.length >= 2
@@ -486,7 +484,6 @@ function statusPage() {
         : worst !== "op"
           ? { bg: "#B45309", text: `${SEV[worst].l} across some systems` }
           : { bg: "#1E7F4F", text: "All systems operational. Suspiciously." };
-  statusSnapshot.banner = banner;
 
   const compRow = (name, status, color, bars, aria, uptime) => `<div class="comp">
       <div class="comp-head"><span class="comp-name">${esc(name)}</span><span class="comp-status" style="color:${color}">${esc(status)}</span></div>
@@ -554,7 +551,7 @@ function statusPage() {
   </section>
   <footer class="s-footer">Society Status is a parody of a service status page. The incidents are real, and each one cites its news sources. Not affiliated with any company named here.</footer>
 </main>`;
-  return layout({ title: "Society Status", description: `${banner.text}. A parody status page for real disruptions, with sources.`, prefix, body, path: "", bodyClass: "status", base: site.statusUrl, siteName: "Society Status", image: `${site.statusUrl}/og.png`, imageAlt: `Society Status: ${banner.text}` });
+  return layout({ title: "Society Status", description: `${banner.text}. A parody status page for real disruptions, with sources.`, prefix, body, path: "", bodyClass: "status", base: site.statusUrl, siteName: "Society Status", image: `${site.statusUrl}/og.png`, imageAlt: "Society Status: a parody status page reporting a major outage across multiple systems." });
 }
 
 // ---------- feeds ----------
@@ -620,29 +617,44 @@ function ogDoor(e) {
 ${brandLine(site.siteUrl)}`, navyBg(boardAge));
 }
 
+// The home and status cards never change: platforms cache them by URL.
+// Only per-door cards carry daily content, and each door has its own URL.
 function ogHome() {
-  const recent = doors.slice(-6);
-  const tiles = recent
-    .map((e) => `<div style="flex:1;height:170px;border-radius:10px;background:${inkOf(e.date)};box-shadow:inset 0 0 0 3px rgba(255,240,200,.5),0 6px 10px rgba(0,0,0,.4);position:relative;transform:rotate(${f((seedOf(e.date) - 0.5) * doorWear(e.date) * 8)}deg)">
+  const DECOR = [
+    { ink: "#B3202A", rot: 0, label: "OPEN" },
+    { ink: "#1E5636", rot: -1.5, label: "OPEN" },
+    { ink: "#B8862A", rot: 1, label: "OPEN" },
+    { ink: "#7A1F3D", rot: -2.5, label: "OPEN" },
+    { ink: "#B3202A", rot: 3, label: "OPEN" },
+    { ink: "#1E5636", rot: -5, label: "?" },
+  ];
+  const tiles = DECOR
+    .map((d) => `<div style="flex:1;height:170px;border-radius:10px;background:${d.ink};box-shadow:inset 0 0 0 3px rgba(255,240,200,.5),0 6px 10px rgba(0,0,0,.4);position:relative;transform:rotate(${d.rot}deg)">
 <span style="position:absolute;left:50%;top:28px;width:56px;height:56px;margin-left:-28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF2B8,#E2B84F 45%,#9C7424)"></span>
-<span style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);padding:5px 12px 4px;border-radius:999px;background:#FFF6DE;color:#1E1914;font:600 22px/1 Oswald,sans-serif;letter-spacing:.06em;white-space:nowrap">${pillDate(e.date)}</span></div>`)
+<span style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);padding:5px 14px 4px;border-radius:999px;background:#FFF6DE;color:#1E1914;font:600 22px/1 Oswald,sans-serif;letter-spacing:.06em;white-space:nowrap">${d.label}</span></div>`)
     .join("");
   return cardShell(`<div style="position:absolute;left:56px;right:56px;top:48px">
 <div style="font:500 20px Oswald,sans-serif;letter-spacing:.2em;color:#EBD9B0">ONE REAL DISRUPTION A DAY · EVERY DOOR CITES ITS SOURCES</div>
 <div style="margin-top:14px;font:400 76px/1.02 Shrikhand,Georgia,serif;color:#FFE9A8;text-shadow:0 4px 0 #8E1B22">The Advent Calendar<br>of Societal Collapse</div>
 <div style="display:flex;gap:22px;margin-top:40px">${tiles}</div></div>
-<div style="position:absolute;left:56px;right:56px;bottom:30px;display:flex;justify-content:space-between;font:600 20px Oswald,sans-serif;letter-spacing:.08em;color:#EBD9B0"><span>“…AN ADVENT CALENDAR OF SOCIETAL COLLAPSE.” · JON STEWART</span><span>${esc(site.siteUrl.replace("https://", ""))}</span></div>`, navyBg(boardAge));
+<div style="position:absolute;left:56px;right:56px;bottom:30px;display:flex;justify-content:space-between;font:600 20px Oswald,sans-serif;letter-spacing:.08em;color:#EBD9B0"><span>“…AN ADVENT CALENDAR OF SOCIETAL COLLAPSE.” · JON STEWART</span><span>${esc(site.siteUrl.replace("https://", ""))}</span></div>`, navyBg(0.3));
 }
 
 function ogStatus() {
-  const { banner, comps = [] } = statusSnapshot;
-  const SEVC = { op: "#3BA55C", degraded: "#E9B949", partial: "#F08C2E", major: "#D93025" };
-  const rows = [...comps.slice(0, 5).map((c) => ({ name: c.name, status: SEV[c.cur].l, color: SEV[c.cur].tc, cur: c.cur })), { name: "Shared sense of reality", status: "Major outage", color: SEV.major.tc, cur: "major" }]
+  const banner = { bg: "#C62828", text: "Major outage across multiple systems" };
+  const FIXED = [
+    ["Air travel and transport", "degraded"],
+    ["Cloud, email and apps", "major"],
+    ["Banking and payments", "partial"],
+    ["Power, water and supply chains", "degraded"],
+    ["Cybersecurity", "major"],
+  ];
+  const rows = [...FIXED.map(([name, cur]) => ({ name, status: SEV[cur].l, color: SEV[cur].tc })), { name: "Shared sense of reality", status: "Major outage", color: SEV.major.tc }]
     .map((r) => `<div style="display:flex;justify-content:space-between;padding:13px 26px;border-top:1px solid #EEF0F3;font-size:22px"><span style="font-weight:600">${esc(r.name)}</span><span style="font-weight:600;color:${r.color}">${esc(r.status)}</span></div>`)
     .join("");
   return cardShell(`<div style="font-family:Inter,system-ui,sans-serif;color:#1D2026;padding:44px 56px">
 <div style="display:flex;align-items:center;gap:14px;font-weight:700;font-size:34px"><svg width="40" height="40" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="none" stroke="#1D2026" stroke-width="2.2"/><path d="M15 2 L13 10 L17 14 L12 20 L15 28" fill="none" stroke="#D93025" stroke-width="2.2" stroke-linejoin="round"/></svg>Society Status</div>
-<div style="margin-top:24px;padding:20px 26px;border-radius:10px;background:${banner?.bg ?? "#C62828"};color:#fff;font-weight:700;font-size:32px">${esc(banner?.text ?? "Major outage across multiple systems")}</div>
+<div style="margin-top:24px;padding:20px 26px;border-radius:10px;background:${banner.bg};color:#fff;font-weight:700;font-size:32px">${esc(banner.text)}</div>
 <div style="margin-top:20px;background:#fff;border:1px solid #E3E5EA;border-radius:10px">${rows}</div>
 <div style="margin-top:16px;font-size:18px;color:#5C6370">${esc(site.statusUrl.replace("https://", ""))} · a parody status page for real disruptions</div></div>`, "#F6F7F9");
 }

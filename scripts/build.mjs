@@ -586,7 +586,9 @@ entries.forEach((e, i) => {
 writeFileSync(join(OUT, "feed.xml"), feed());
 writeFileSync(join(OUT, "doors.json"), JSON.stringify(entries.map(({ file, review, ...e }) => e), null, 2));
 for (const dir of [OUT, OUT_STATUS])
-  for (const file of ["style.css", "app.js", "favicon.svg"]) copyFileSync(join(ROOT, "src", file), join(dir, file));
+  for (const file of ["style.css", "app.js"]) copyFileSync(join(ROOT, "src", file), join(dir, file));
+copyFileSync(join(ROOT, "src", "favicon.svg"), join(OUT, "favicon.svg"));
+copyFileSync(join(ROOT, "src", "favicon-status.svg"), join(OUT_STATUS, "favicon.svg"));
 // ---------- social preview cards (rendered to PNG by scripts/og.mjs) ----------
 const OG_SRC = join(ROOT, "_og");
 const cardShell = (inner, bg) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>

@@ -61,6 +61,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -- .
+          git clean -fdq entries/
           git merge --squash "origin/$BRANCH"
           git commit -m "Publish ${BRANCH#claude/entry-}"
           git push origin main

@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-17",
+  "calm": false,
+  "headline": {
+    "title": "The NSA’s classified network goes down",
+    "quip": "The agency built to intercept everyone’s communications couldn’t reach its own. Staff were told to arrive in shifts so they wouldn’t all hit the login page at once.",
+    "summary": "The NSA’s internal network, NSANet, suffered an outage that the agency called a “temporary degradation during scheduled routine maintenance.” Staff at Fort Meade were given staggered arrival times, and there was no evidence of a cyberattack. No restoration time was given.",
+    "categories": [
+      "tech",
+      "public-services"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/nsa-network-down-classified-fort-meade/"
+      },
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/technology/article/cyberattacks-and-outages-here-are-all-of-the-major-national-disruptions-in-november-181143019.html"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "Apple’s iCloud, App Store and Apple Pay stumble",
+      "summary": "iCloud users were signed out, and the App Store, Apple Music, Apple Pay, AppleCare and App Store Connect had problems; store systems in New York and Chicago were offline for over an hour. Apple said an internal update caused the outages, not a cyberattack.",
+      "categories": [
+        "tech"
+      ],
+      "region": "Global",
+      "sources": [
+        {
+          "name": "9to5Mac",
+          "url": "https://9to5mac.com/2026/11/17/icloud-app-store-and-other-apple-services-hit-by-ongoing-outage/"
+        },
+        {
+          "name": "IBTimes",
+          "url": "https://www.ibtimes.com/apple-internal-update-caused-service-outages-3809875"
+        }
+      ]
+    },
+    {
+      "title": "The National Weather Service website goes dark for 40 minutes",
+      "summary": "NOAA said routine network maintenance took down National Weather Service websites and data services from 11:05 to 11:45 a.m. ET, drawing more than 400 Downdetector reports. NOAA Weather Radio and NOAAPort weren’t affected.",
+      "categories": [
+        "tech",
+        "public-services"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "Yahoo News",
+          "url": "https://www.yahoo.com/news/weather-news/articles/did-national-weather-website-crash-175721243.html"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-04",
+  "calm": false,
+  "headline": {
+    "title": "A French bank is robbed through its supplier",
+    "quip": "About €100 million left the bank without anyone touching a vault. Customers lose nothing, the bank says, except the app for a while.",
+    "summary": "Attackers stole about €100 million from Crédit Mutuel Arkéa through a supplier, according to the bank; Le Télégramme had reported €118 million. Some transactions were suspended, transfers were delayed and the app was unavailable. The bank says customers face no losses.",
+    "categories": [
+      "finance",
+      "cyber"
+    ],
+    "region": "France",
+    "sources": [
+      {
+        "name": "The Connexion",
+        "url": "https://www.connexionfrance.com/news/french-bank-hit-by-cyberattack-with-118m-reportedly-stolen/826244"
+      },
+      {
+        "name": "CSO Online",
+        "url": "https://www.csoonline.com/article/4245357/french-banking-group-hit-by-supply-chain-cyberattack.html"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "Ransomware hits all 66 Queens Public Library branches",
+      "summary": "Ransomware took down computers, checkout machines, Wi-Fi and the app across all 66 Queens Public Library branches, which stayed open.",
+      "categories": [
+        "cyber",
+        "public-services"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/queens-library-ransomware-causes-disruptions"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

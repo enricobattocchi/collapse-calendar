@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-07",
+  "calm": false,
+  "headline": {
+    "title": "A hack stops three factories at Swedish furniture maker Kinnarps",
+    "quip": "Office furniture production halted. The world’s open-plan offices got a brief reprieve.",
+    "summary": "A cyberattack on Kinnarps, the Swedish office furniture maker, stopped production at three of its factories.",
+    "categories": [
+      "cyber",
+      "infrastructure"
+    ],
+    "region": "Sweden",
+    "sources": [
+      {
+        "name": "TV4 (TT)",
+        "url": "https://www.tv4.se/artikel/tt-261110-kinnarps1-c80167eb/svensk-mobeljatte-hackad-fabriker-stoppades"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

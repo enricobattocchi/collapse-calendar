@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-08",
+  "calm": false,
+  "headline": {
+    "title": "A mobile network outage stops every train in Norway",
+    "quip": "Telenor found “no signs of hacking or attack,” only the regular kind of failure, the one that stops a whole country’s trains by itself.",
+    "summary": "A Telenor fault starting at 3:15 p.m. local time disrupted mobile service across Norway. Rail operator Bane Nor stopped all trains nationwide because controllers couldn’t reach emergency services, and some users couldn’t call 112. SMS and data were back by 6 p.m., but voice problems persisted. Telenor said there were no signs of hacking or attack.",
+    "categories": [
+      "tech",
+      "transport"
+    ],
+    "region": "Norway",
+    "sources": [
+      {
+        "name": "Anadolu Agency",
+        "url": "https://www.aa.com.tr/en/europe/mobile-network-outage-halts-trains-across-norway-disrupts-emergency-calls/4082669"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

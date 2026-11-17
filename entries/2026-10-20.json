@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-20",
+  "calm": false,
+  "headline": {
+    "title": "A Google Cloud “power event” in London knocks UK bank apps offline",
+    "quip": "Banks, the post and the courts all went down together. Britain’s institutions finally share something: one data center.",
+    "summary": "Google Cloud zone europe-west2-b in London failed from 23:08 PDT on October 19, the morning of October 20 in the UK; most workloads recovered by 05:10 PDT. Revolut card payments and ATM withdrawals, Lloyds, Halifax, Bank of Scotland, HSBC, Royal Mail, DPD and court video hearings in England and Wales were affected. Google described a “power event” and called it a third-party issue.",
+    "categories": [
+      "tech",
+      "finance"
+    ],
+    "region": "United Kingdom",
+    "sources": [
+      {
+        "name": "IBTimes UK",
+        "url": "https://www.ibtimes.co.uk/google-cloud-outage-uk-banks-court-hearings-1827001"
+      },
+      {
+        "name": "Yahoo News",
+        "url": "https://www.yahoo.com/news/us/articles/google-cloud-power-event-knocks-002800557.html"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

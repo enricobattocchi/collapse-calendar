@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-10",
+  "calm": false,
+  "headline": {
+    "title": "Eastern Cuba drops off the national grid",
+    "quip": "1,250 MW available for an evening that needed 2,900. The grid did the math before anyone else.",
+    "summary": "The Nuevitas–Las Tunas 220 kV line tripped at 12:46 p.m., and utility UNE reported a partial disconnection of the eastern zone. The evening forecast showed 1,250 MW available against 2,900 MW of demand. Officials blamed fuel scarcity, with more than 1,200 MW of capacity idle for lack of fuel.",
+    "categories": [
+      "infrastructure"
+    ],
+    "region": "Cuba",
+    "sources": [
+      {
+        "name": "The Rio Times",
+        "url": "https://www.riotimesonline.com/cuba-blackout-eastern-grid-2026/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

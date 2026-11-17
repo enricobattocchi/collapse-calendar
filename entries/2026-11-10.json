@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-10",
+  "calm": false,
+  "headline": {
+    "title": "A cyberattack hits Poland’s e-government platform",
+    "quip": "The attack was “detected and stopped.” Restoration work, as is traditional for government IT, continued.",
+    "summary": "Poland’s ePUAP e-government platform was hit by a cyberattack. Minister Gawkowski said it was “detected and stopped,” but restoration work continued, and the Internal Security Agency (ABW) is investigating.",
+    "categories": [
+      "cyber",
+      "public-services"
+    ],
+    "region": "Poland",
+    "sources": [
+      {
+        "name": "money.pl",
+        "url": "https://www.money.pl/gospodarka/cyberatak-na-system-epuap-gawkowski-zostal-zatrzymany-7349623966661056a.html"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

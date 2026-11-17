@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-14",
+  "calm": false,
+  "headline": {
+    "title": "Ireland’s public sector walks out for 24 hours",
+    "quip": "The strike lasted 24 hours. The pay deal behind it had been stalled considerably longer.",
+    "summary": "Hundreds of thousands of Irish public-sector workers walked out for 24 hours over a stalled pay deal, the first such strike since 2009. Most schools, colleges and universities closed, and thousands of medical appointments were cancelled.",
+    "categories": [
+      "public-services"
+    ],
+    "region": "Ireland",
+    "sources": [
+      {
+        "name": "ClickOnDetroit (AP)",
+        "url": "https://www.clickondetroit.com/business/2026/10/14/irish-public-sector-workers-strike-leading-to-school-closures-and-canceled-medical-appointments/"
+      },
+      {
+        "name": "Wikipedia: Current events, October 2026",
+        "url": "https://en.wikipedia.org/wiki/Portal:Current_events/October_2026"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

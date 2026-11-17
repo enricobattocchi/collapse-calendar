@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-05",
+  "calm": false,
+  "headline": {
+    "title": "Bomb hoaxes hit at least 27 European flights in one day",
+    "quip": "Fighter jets, diversions, a plane stopped mid-taxi, and nothing on board anywhere. European airspace, held hostage by an inbox.",
+    "summary": "At least 27 flights across Europe received bomb hoaxes in a single day; counts range from 25 to 27. French jets intercepted an Aer Lingus Dublin–Rome flight and took it to Évreux, a London–Sofia flight diverted to Plovdiv, Spain received three emailed threats in under 20 minutes, and a LOT flight was halted while taxiing. Nothing was found.",
+    "categories": [
+      "transport"
+    ],
+    "region": "Europe",
+    "sources": [
+      {
+        "name": "Khaleej Times",
+        "url": "https://www.khaleejtimes.com/europe/european-flights-bomb-threats-diversion-emergency-landing-november-5"
+      },
+      {
+        "name": "The National",
+        "url": "https://www.thenationalnews.com/news/uk/2026/11/06/flights-diverted-and-airports-on-alert-across-europe/"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "A nationwide strike closes a third of French high schools",
+      "summary": "A nationwide strike in France closed or disrupted about a third of high schools, disrupted public transport in some areas and closed the Eiffel Tower. Turnout estimates ranged from more than 600,000 (Interior Ministry) to about 1.6 million (CGT).",
+      "categories": [
+        "public-services",
+        "transport"
+      ],
+      "region": "France",
+      "sources": [
+        {
+          "name": "Click2Houston (AP)",
+          "url": "https://www.click2houston.com/business/2026/11/05/french-unions-unite-for-nationwide-strikes-piling-more-pressure-on-macrons-government/"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

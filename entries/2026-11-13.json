@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-13",
+  "calm": false,
+  "headline": {
+    "title": "The FAA grounds flights across the United States",
+    "quip": "Investigators point to one router at a radio site in Arkansas: one box, too many connection requests, zero planes. Have you tried turning the airspace off and on again? They did.",
+    "summary": "The FAA ordered a nationwide ground stop after a telecommunications disruption hit air traffic control networks, only the second since 9/11. It lasted more than four hours and was lifted at 8:15 p.m. ET. Reports link the problem to a router that flooded the networks during contractor work in El Dorado, Arkansas; Transportation Secretary Sean Duffy said the FAA doesn’t yet know the ultimate cause. Officials said AI wasn’t a factor.",
+    "categories": [
+      "transport",
+      "infrastructure"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/news/us-news/flights-air-traffic-delays-groundstop-faa-duffy-rcna609545"
+      },
+      {
+        "name": "WOWT",
+        "url": "https://www.wowt.com/2026/11/14/faa-issues-nationwide-ground-stop-second-time-since-911-what-know/?outputType=amp"
+      },
+      {
+        "name": "FAA: Nationwide ground stop Q&A",
+        "url": "https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "Microsoft 365, day two: paper, phones and fax",
+      "summary": "The Microsoft outage continued into a second day. Some NHS staff in England switched to paper records, Brazil’s Supreme Court suspended procedural deadlines, and Bloomberg reported traders going back to phones and fax. Microsoft reported a partial recovery and narrowed the problem mostly to Exchange.",
+      "categories": [
+        "tech",
+        "public-services"
+      ],
+      "region": "Global",
+      "sources": [
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2026/nov/13/how-microsoft-outage-has-affected-key-public-services-in-the-uk"
+        },
+        {
+          "name": "Wikipedia: 2026 Microsoft outage",
+          "url": "https://en.wikipedia.org/wiki/2026_Microsoft_outage"
+        }
+      ]
+    },
+    {
+      "title": "A hotel pool’s chlorine alarm ran on Outlook",
+      "summary": "At a hotel in Brühl, Germany, an automatic chlorine dosing system malfunctioned and sent excess chlorine into the pool water. The monitoring system sends its alerts by Outlook email, so no alert went out. Paramedics checked 15 people, and 5 were injured.",
+      "categories": [
+        "tech",
+        "infrastructure"
+      ],
+      "region": "Germany",
+      "sources": [
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/saas/2026/11/16/microsoft-outlook-outage-blamed-after-15-injured-in-hotel-pool-chlorine-incident/5310087"
+        }
+      ]
+    },
+    {
+      "title": "Workday locks thousands of businesses out of HR and payroll",
+      "summary": "A Workday outage left users at about 11,500 customer businesses locked out of HR and payroll from Friday evening, with about 3,000 Downdetector reports. Reports said it began with a backup-systems test and wasn’t related to a cybersecurity incident; service came back on November 14.",
+      "categories": [
+        "tech"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "FOX 7 Austin",
+          "url": "https://www.fox7austin.com/news/workday-outage-means-employees-across-thousands-businesses-cant-access-accounts"
+        },
+        {
+          "name": "Wikipedia: November 2026 technology outages",
+          "url": "https://en.wikipedia.org/wiki/November_2026_technology_outages"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

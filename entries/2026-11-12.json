@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-12",
+  "calm": false,
+  "headline": {
+    "title": "Microsoft 365 goes down worldwide",
+    "quip": "Outlook, Teams and Copilot stopped working in more than 70 countries. For one afternoon, nobody anywhere could schedule a meeting about the meeting.",
+    "summary": "Starting shortly before 1 p.m. ET, a Microsoft 365 outage knocked out Outlook, Teams and Copilot worldwide. Downdetector logged more than 7.4 million reports, the NHS and London’s Metropolitan Police were affected, and service was restored on November 14. Microsoft blamed “an issue during an earlier network capacity upgrade” and said it hadn’t detected any malicious activity.",
+    "categories": [
+      "tech"
+    ],
+    "region": "Global",
+    "sources": [
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/11/12/microsoft-outage-outlook-aws-google.html"
+      },
+      {
+        "name": "Star-Advertiser (Reuters)",
+        "url": "https://www.staradvertiser.com/2026/11/13/breaking-news/microsoft-outage-disrupts-businesses-and-governments-worldwide/"
+      },
+      {
+        "name": "Wikipedia: 2026 Microsoft outage",
+        "url": "https://en.wikipedia.org/wiki/2026_Microsoft_outage"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

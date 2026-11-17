@@ -1,0 +1,10 @@
+// Cloudflare Workers static-assets site for _site/status (built by scripts/build.mjs).
+// The custom domain society-status.lopo.it was attached once from wrangler.domains.status.jsonc;
+// CI deploys with this file, so its token needs only "Workers Scripts: Edit".
+{
+  "name": "society-status",
+  "compatibility_date": "2026-11-17",
+  "assets": { "directory": "../_site/status" },
+  "workers_dev": true,
+  "observability": { "enabled": true }
+}

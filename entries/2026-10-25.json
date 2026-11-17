@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-25",
+  "calm": false,
+  "headline": {
+    "title": "Santiago de Cuba and Guantánamo go dark",
+    "quip": "One line tripped and two provinces went dark. Eastern Cuba’s grid has now had its second door this month.",
+    "summary": "The 220 kV Cueto–Renté line tripped around 1:14 p.m., cutting Santiago de Cuba and Guantánamo provinces, home to about 1.4 million people, off the grid. UNE forecast a deficit of about 1,730 MW and gave no technical cause.",
+    "categories": [
+      "infrastructure"
+    ],
+    "region": "Cuba",
+    "sources": [
+      {
+        "name": "The Rio Times",
+        "url": "https://www.riotimesonline.com/cuba-power-grid-fails-two-eastern-provinces-2026/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+# Receives the branches that the daily routine pushes (claude/entry-YYYY-MM-DD).
+# Safe entries go straight to main and deploy; anything else becomes a pull request
+# assigned to the repository owner, which triggers a GitHub notification.
+name: Intake daily entry
+
+on:
+  push:
+    branches: ["claude/entry-*"]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: intake-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      BRANCH: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Decide whether the entry needs review
+        id: gate
+        run: |
+          git fetch origin main
+          git diff --name-only origin/main...HEAD | node scripts/review-gate.mjs
+
+      - name: Check that the site still builds
+        id: build
+        run: node scripts/build.mjs
+
+      - name: Publish automatically
+        if: steps.gate.outputs.auto == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout main
+          git pull --ff-only origin main
+          git merge --squash "origin/$BRANCH"
+          git commit -m "Publish ${BRANCH#claude/entry-}"
+          git push origin main
+          git push origin --delete "$BRANCH"
+          # Pushes made with GITHUB_TOKEN don't trigger other workflows, so start the deploy explicitly.
+          gh workflow run deploy.yml --ref main
+
+      - name: Ask the owner for review
+        if: steps.gate.outputs.auto != 'true'
+        env:
+          REASONS: ${{ steps.gate.outputs.reasons }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          gh label create needs-review --color d93f0b --description "Waiting for the owner's OK" 2>/dev/null || true
+          {
+            echo "The daily routine drafted a door that needs your OK before it goes live."
+            echo
+            echo "**Why:**"
+            echo "$REASONS"
+            echo
+            echo "- To publish, merge this pull request."
+            echo "- To fix it first, edit the JSON file in this pull request, then merge."
+            echo "- To skip the day, close the pull request. The watchdog then opens an issue about the missing door."
+          } > "$RUNNER_TEMP/body.md"
+          existing=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh pr comment "$existing" --body-file "$RUNNER_TEMP/body.md"
+          else
+            gh pr create --base main --head "$BRANCH" \
+              --title "Door for ${BRANCH#claude/entry-} needs review" \
+              --body-file "$RUNNER_TEMP/body.md" \
+              --label needs-review --assignee "$OWNER"
+          fi

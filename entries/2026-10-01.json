@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-01",
+  "calm": false,
+  "headline": {
+    "title": "Ransomware shuts down Vicksburg’s city computers",
+    "quip": "The city promised no late fees and no shut-offs while its systems were down: the most generous thing ransomware has ever done for a utility customer.",
+    "summary": "A ransomware attack forced Vicksburg, Mississippi, to temporarily shut down city computer systems, according to Mayor Willis Thompson. 911, police and fire services weren’t affected. In-person utility payments could be delayed, and the city said it wouldn’t charge penalties or cut off service while systems were down.",
+    "categories": [
+      "cyber",
+      "public-services"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "WLBT",
+        "url": "https://www.wlbt.com/2026/10/02/city-vicksburg-hit-by-ransomware-cyberattack-mayor-says/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

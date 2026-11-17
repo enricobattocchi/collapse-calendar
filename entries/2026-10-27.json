@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-27",
+  "calm": false,
+  "headline": {
+    "title": "Honda and Acura dealers lose their ordering portal",
+    "quip": "Dealers couldn’t order parts or look up recalls, so for once nobody could tell you the part was on back order.",
+    "summary": "A cyber incident took Honda’s iN dealer portal offline in the US. Dealers couldn’t submit finance applications, order parts or check recalls. The portal came back, then went offline again.",
+    "categories": [
+      "cyber",
+      "tech"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "Dealership Guy",
+        "url": "https://news.dealershipguy.com/p/honda-in-outage-enters-second-day-leaving-dealers-without-critical-system-access"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

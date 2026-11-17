@@ -1,0 +1,47 @@
+# Opens an issue for the owner when yesterday's door is missing by 10:00 UTC,
+# for example because the routine didn't run or a review pull request is still open.
+name: Watchdog
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OWNER: ${{ github.repository_owner }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check yesterday's door
+        run: |
+          day=$(TZ=Europe/Rome date -d yesterday +%F)
+          if [ -f "entries/$day.json" ]; then
+            echo "Door for $day is published."
+            exit 0
+          fi
+          pr=$(gh pr list --head "claude/entry-$day" --state open --json url --jq '.[0].url')
+          title="Door for $day is missing"
+          if gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number' | grep -q .; then
+            echo "Issue already open."
+            exit 0
+          fi
+          {
+            echo "The door for **$day** isn't on \`main\`."
+            echo
+            if [ -n "$pr" ]; then
+              echo "A pull request is waiting for your review: $pr"
+            else
+              echo "No pull request exists either, so the routine probably didn't run or failed."
+              echo "Check the routine runs at https://claude.ai/code/routines."
+            fi
+          } > "$RUNNER_TEMP/body.md"
+          gh label create watchdog --color fbca04 --description "Opened by the watchdog" 2>/dev/null || true
+          gh issue create --title "$title" --body-file "$RUNNER_TEMP/body.md" --assignee "$OWNER" --label watchdog

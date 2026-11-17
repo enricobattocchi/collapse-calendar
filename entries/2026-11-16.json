@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-16",
+  "calm": false,
+  "headline": {
+    "title": "A software bug slows JPMorgan Chase, and America checks its balance",
+    "quip": "Chase traced hours of slow transactions to a bug in “on-premise hardware systems,” the three scariest words in banking IT.",
+    "summary": "Some JPMorgan Chase transactions slowed for hours, with about 4,800 Downdetector reports by 2 p.m. ET; Chase said customers kept access to their accounts and funds. It blamed a “software bug in on-premise hardware systems” and said there was no evidence of a cyber link. Customers of other banks reported problems too; Bank of America, Capital One and U.S. Bank said their own systems weren’t directly affected, and some Zelle payments were delayed.",
+    "categories": [
+      "finance",
+      "tech"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "Insurance Journal (Bloomberg)",
+        "url": "https://www.insurancejournal.com/news/national/2026/11/16/892775.htm"
+      },
+      {
+        "name": "CBS News",
+        "url": "https://www.cbsnews.com/news/banks-online-service-outages-jpmorgan-chase-bank-of-america-wells-fargo/"
+      },
+      {
+        "name": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/16/thousands-report-difficulties-accessing-accounts-online-at-major-us-banks"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "United Airlines’ pilot apps stall departures",
+      "summary": "A systemwide outage of more than 90 minutes hit multiple pilot-facing applications at United Airlines, so final aircraft weights couldn’t be provided and departures were delayed. United said there was no sign of a cyberattack.",
+      "categories": [
+        "transport",
+        "tech"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/11/16/united-airlines-outage-faa.html"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/16/thousands-report-difficulties-accessing-accounts-online-at-major-us-banks"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

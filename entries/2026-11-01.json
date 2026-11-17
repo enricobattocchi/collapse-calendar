@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-01",
+  "calm": false,
+  "headline": {
+    "title": "Brazil’s Mercado Bitcoin suspends deposits and withdrawals after a hack",
+    "quip": "Three days after Binance, the sequel. Crypto keeps proving it doesn’t need banks to have a bank run.",
+    "summary": "Mercado Bitcoin suspended deposits and withdrawals after outflows began late Sunday. Blockchain firms said more than $46 million left the exchange, a figure Mercado Bitcoin didn’t confirm, and Tether froze about $4.5 million. The exchange, which has about 4.5 million customers, said customers weren’t harmed.",
+    "categories": [
+      "finance",
+      "cyber"
+    ],
+    "region": "Brazil",
+    "sources": [
+      {
+        "name": "The Record",
+        "url": "https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

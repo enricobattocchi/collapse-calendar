@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-26",
+  "calm": false,
+  "headline": {
+    "title": "A cyberattack forces New Mexico’s only Level-1 trauma center to divert ambulances",
+    "quip": "A whole state’s top trauma care ran through one hospital, and the hospital ran through one network. Single points of failure, nested.",
+    "summary": "A cyberattack on University of New Mexico Health led UNM Hospital, which runs the state’s only Level-1 trauma center, to divert all ambulances, restrict admissions and cancel clinic appointments and outpatient surgeries. Classes at four health-sciences colleges were cancelled. A group calling itself Byod claimed to have stolen data; UNM hasn’t confirmed this.",
+    "categories": [
+      "cyber",
+      "public-services"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "GovInfoSecurity",
+        "url": "https://www.govinfosecurity.com/cyberattack-disrupts-new-mexicos-only-trauma-center-a-33220"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "The Federal Election Commission’s e-filing goes dark",
+      "summary": "E-filing at the US Federal Election Commission went down at about 10 p.m. ET after an email said a hacker was trying to breach its systems, and campaign spending reports couldn’t be filed. Reports put the outage at about 41 hours.",
+      "categories": [
+        "cyber",
+        "public-services"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "GV Wire (Reuters)",
+          "url": "https://gvwire.com/2026/10/27/hacker-trying-to-breach-us-federal-election-commission-system-email-shows/"
+        },
+        {
+          "name": "Yahoo News",
+          "url": "https://www.yahoo.com/news/us/articles/ai-fueled-hacking-spree-black-003852200.html"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

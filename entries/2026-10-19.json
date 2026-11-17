@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-19",
+  "calm": false,
+  "headline": {
+    "title": "Hoax bomb emails hit schools in Northern Ireland and Scotland",
+    "quip": "The threats were fake. The evacuations, closures and lost school day were real.",
+    "summary": "Schools in Northern Ireland and Scotland received hoax bomb emails. Northern Ireland minister Paul Givan said 160 schools received a threat, while other reports put the number at up to 300; some schools closed or evacuated. Police Scotland treated the messages as a hoax.",
+    "categories": [
+      "public-services"
+    ],
+    "region": "United Kingdom",
+    "sources": [
+      {
+        "name": "Euronews",
+        "url": "https://www.euronews.com/2026/10/19/northern-ireland-and-scotland-schools-sent-hoax-bomb-warnings-officials-say"
+      },
+      {
+        "name": "BBC News",
+        "url": "https://www.bbc.co.uk/news/articles/ckwy4549y0eqo"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

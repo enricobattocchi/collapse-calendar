@@ -1,0 +1,22 @@
+{
+  "title": "The Advent Calendar of Societal Collapse",
+  "shortTitle": "Collapse Calendar",
+  "tagline": "One door a day. Behind each one, something that stopped working.",
+  "siteUrl": "https://collapse-calendar.lopo.it",
+  "startDate": "2026-11-12",
+  "timezone": "Europe/Rome",
+  "publishTime": "07:00",
+  "repo": "enricobattocchi/collapse-calendar",
+  "inspiration": {
+    "quote": "an advent calendar of societal collapse",
+    "who": "Jon Stewart",
+    "show": "The Daily Show",
+    "date": "2026-11-16",
+    "url": "https://www.youtube.com/watch?v=now0emhNT4A"
+  },
+  "statusUrl": "https://society-status.lopo.it",
+  "cloudflare": {
+    "calendarWorker": "collapse-calendar",
+    "statusWorker": "society-status"
+  }
+}

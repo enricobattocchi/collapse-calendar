@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-07",
+  "calm": false,
+  "headline": {
+    "title": "Ransomware hits a Japanese cloud used by 495 companies and local governments",
+    "quip": "Some data could only be restored from backups that customers kept themselves. The cloud is someone else’s computer, and the backup is still yours.",
+    "summary": "A ransomware attack on IDC Frontier, a SoftBank subsidiary, began around 3:40 a.m. JST in its East Japan Region 1 and affected 495 companies and local governments. Management consoles were disabled in all regions, and some customer data was difficult to restore except from backups that customers kept themselves. The attacker’s claims about data volumes are unverified.",
+    "categories": [
+      "cyber",
+      "tech"
+    ],
+    "region": "Japan",
+    "sources": [
+      {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/ransomware-attack-disrupts-japans-idcf-cloud-used-by-govt-clients/"
+      },
+      {
+        "name": "@IT (ITmedia)",
+        "url": "https://atmarkit.itmedia.co.jp/ait/spv/2610/09/news036.html"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

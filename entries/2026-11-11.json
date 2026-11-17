@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-11",
+  "calm": false,
+  "headline": {
+    "title": "Hoax bomb emails empty about 300 Italian schools",
+    "quip": "About 6,300 schools got the same email from the same made-up name. The fire drills were very real.",
+    "summary": "About 6,300 Italian schools received a hoax bomb email signed “Mikhail Andropov,” which also threatened Prime Minister Meloni. Education Minister Giuseppe Valditara said at least 300 were evacuated. Schools in Northern Ireland, Scotland and Ireland received similar emails and were told to stay open.",
+    "categories": [
+      "public-services"
+    ],
+    "region": "Europe",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "url": "https://aljazeera.com/news/2026/11/11/at-least-300-italian-schools-evacuated-after-email-bomb-alerts"
+      },
+      {
+        "name": "The Irish Times",
+        "url": "https://www.irishtimes.com/crime-law/2026/11/11/gardai-investigating-series-of-bomb-threats-to-schools/"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "Spain holds its first general strike in 14 years",
+      "summary": "Spain’s first general strike in 14 years led AENA to cancel about 5% of flights; Barcelona’s metro and buses stopped outside rush hour, and many schools closed.",
+      "categories": [
+        "transport",
+        "public-services"
+      ],
+      "region": "Spain",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/amp/news/2026/11/11/spains-first-general-strike-in-14-years-begins"
+        },
+        {
+          "name": "WUNC",
+          "url": "https://www.wunc.org/2026-11-11/spains-first-general-strike-in-14-years-demands-solutions-to-housing-crisis"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

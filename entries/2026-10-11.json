@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-11",
+  "calm": false,
+  "headline": {
+    "title": "French supermarket fridges get hacked into ovens",
+    "quip": "Attackers switched refrigeration controllers at hundreds of French supermarkets to defrost overnight, and some cases hit 50°C. Many of the controllers reportedly accepted the login “admin” with the date as the password, which is less a password than a greeting.",
+    "summary": "An unknown party hacked refrigeration controllers at up to 700 French supermarkets, including Intermarché, Netto, Coopérative U, Carrefour and Monoprix stores, and set them to defrost overnight. Some fridges reached 50°C within six hours, and some equipment melted or caught fire.",
+    "categories": ["cyber", "infrastructure"],
+    "region": "France",
+    "sources": [
+      { "name": "The Guardian", "url": "https://www.theguardian.com/world/2026/oct/12/cyber-attack-defrosts-refrigerators-france-supermarket-chains-intermarche-cooperative-u" },
+      { "name": "Wikipedia: 2026 European cold chain hacks", "url": "https://en.wikipedia.org/wiki/2026_European_cold_chain_hacks" }
+    ]
+  },
+  "also": [],
+  "review": { "needed": false, "reasons": ["Backfilled during setup and reviewed by the owner."] }
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-29",
+  "calm": false,
+  "headline": {
+    "title": "Binance loses about $6.3 billion in 20 minutes and freezes withdrawals",
+    "quip": "The largest crypto theft on record began, says Binance, with a fake job interview. Decentralized finance, centrally compromised.",
+    "summary": "Attackers took about $6.3 billion from Binance across 10 blockchains in about 20 minutes, the largest crypto theft on record. Binance suspended withdrawals, and Tether and Circle froze about $3 billion in stablecoins; withdrawals resumed on November 1. Binance blamed an engineer infected through a fake job interview and an internal AI tool abused to reach a deployment token. The FBI attributed the hack to North Korea’s TraderTraitor.",
+    "categories": [
+      "finance",
+      "cyber"
+    ],
+    "region": "Global",
+    "sources": [
+      {
+        "name": "Wikipedia: 2026 Binance hack",
+        "url": "https://en.wikipedia.org/wiki/2026_Binance_hack"
+      },
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html"
+      },
+      {
+        "name": "Euronews",
+        "url": "https://www.euronews.com/2026/10/30/crypto-platform-binance-confirms-major-hack-with-more-than-25bn-frozen"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

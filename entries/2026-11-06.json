@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-06",
+  "calm": false,
+  "headline": {
+    "title": "Bomb threats empty newsrooms in Ireland and Bulgaria",
+    "quip": "RTÉ’s programming went off air for more than an hour: a rare case of the news being interrupted by the news.",
+    "summary": "Emailed bomb threats forced evacuations at RTÉ in Dublin, interrupting programming for more than an hour, and at the Irish Independent and Newstalk. Bulgaria’s Nova TV evacuated but kept broadcasting. The emails were signed “Mikhail Andropov,” a name that also claimed the flight hoaxes; Reuters couldn’t verify the sender. At least 25 flight alerts followed the same day.",
+    "categories": [
+      "public-services"
+    ],
+    "region": "Europe",
+    "sources": [
+      {
+        "name": "TimesLIVE",
+        "url": "https://www.timeslive.co.za/news/world/2026-11-06-offices-of-irish-media-groups-evacuated-due-to-bomb-threats-one-deemed-a-hoax/"
+      },
+      {
+        "name": "Khaleej Times",
+        "url": "https://www.khaleejtimes.com/europe/europe-newsroom-bomb-threats-after-flight-hoaxes"
+      },
+      {
+        "name": "The Star",
+        "url": "https://www.thestar.com.my/news/world/2026/11/06/bomb-scare-forces-diversion-of-prague-rome-flight-to-venice"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "A cyberattack hits the Port of Santos authority",
+      "summary": "A cyberattack took down administrative systems, power and internet in the Port of Santos authority’s administrative area in Brazil; ship and cargo operations weren’t affected.",
+      "categories": [
+        "cyber",
+        "transport"
+      ],
+      "region": "Brazil",
+      "sources": [
+        {
+          "name": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/porto-de-santos-sistemas-seguem-afetados-apos-ataque-cibernetico"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

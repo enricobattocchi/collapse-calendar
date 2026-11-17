@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-14",
+  "calm": true,
+  "headline": {
+    "title": "Everything works again. Nobody trusts it.",
+    "quip": "Microsoft declared its services fully restored, and planes were back in the air. Behind today’s door, a sticky note: “Back Monday.”",
+    "summary": "Microsoft said its services were fully restored on the morning of November 14, after the outage that began on November 12. US flights had resumed late on November 13. No new major disruption made the list.",
+    "categories": [
+      "tech"
+    ],
+    "region": "Global",
+    "sources": [
+      {
+        "name": "BBC News",
+        "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "A cyberattack closes South Portland’s City Hall",
+      "summary": "South Portland, Maine, discovered a suspected cyberattack at about 11:30 p.m. Saturday; City Hall and the library closed on Monday and Tuesday. Police, fire and EMS weren’t affected.",
+      "categories": [
+        "cyber",
+        "public-services"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "Portland Press Herald",
+          "url": "https://www.pressherald.com/2026/11/16/south-portland-offices-closed-monday-after-suspected-cyberattack/"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

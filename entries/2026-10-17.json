@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-17",
+  "calm": false,
+  "headline": {
+    "title": "A certificate authority’s private key turns out to be the number 4",
+    "quip": "One of the keys that secured the internet was the number 4. Not 4 billion. Four.",
+    "summary": "A researcher recovered the private keys of eight intermediate certificate authorities run by India’s eMudhra; one key was the number 4. eMudhra revoked all eight within 14 hours, browsers distrusted them, and about 30,000 US certificates had to move to another root. The company blamed “a script error and human oversight” and on October 22 said it would exit the global TLS business.",
+    "categories": [
+      "cyber",
+      "tech"
+    ],
+    "region": "Global",
+    "sources": [
+      {
+        "name": "The Register",
+        "url": "https://www.theregister.com/security/2026/10/20/indian-certification-authority-emudhras-private-keys-compromised-one-of-them-was-the-number-4/5304312"
+      },
+      {
+        "name": "Inc42",
+        "url": "https://inc42.com/features/emudhra-to-exit-certificate-business-as-security-flaw-triggers-distrust/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

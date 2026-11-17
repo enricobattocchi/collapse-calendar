@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-03",
+  "calm": false,
+  "headline": {
+    "title": "Bomb hoaxes divert flights and empty a cruise ship",
+    "quip": "Nothing was found on any aircraft, which is the good news, and also exactly how a hoax works.",
+    "summary": "Hoax bomb threats hit at least seven flights, four of them Ryanair, plus Wizz Air, SAS and LOT, and a cruise ship. Warsaw Modlin airport closed, a runway closed at Warsaw Chopin, and Eurofighters escorted a Ryanair flight into Rome. About 1,500 people were evacuated from the cruise ship Crown Iris off Syros, Greece. Nothing was found.",
+    "categories": [
+      "transport"
+    ],
+    "region": "Europe",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/11/04/bomb-threats-disrupt-flights-across-europe-no-explosive-devices-found"
+      },
+      {
+        "name": "Khaleej Times",
+        "url": "https://www.khaleejtimes.com/europe/european-flights-bomb-threats-diversion-emergency-landing-november-5"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "A New York casino goes cash-only after a cyber incident",
+      "summary": "Turning Stone casino in New York went cash-only after a cyber incident; ATMs were off, and bingo and sportsbooks closed there and at four affiliates.",
+      "categories": [
+        "cyber",
+        "finance"
+      ],
+      "region": "United States",
+      "sources": [
+        {
+          "name": "AOL",
+          "url": "https://www.aol.com/articles/turning-stone-casino-temporarily-going-034958000.html"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

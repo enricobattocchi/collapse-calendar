@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-09",
+  "calm": false,
+  "headline": {
+    "title": "Vanderbilt University shuts down devices campus-wide",
+    "quip": "Eight days later, Teams was still disabled. Some faculty may describe this as a partial recovery.",
+    "summary": "Vanderbilt University reported an ongoing cyberattack and shut down devices across campus. OneDrive, SharePoint and Teams were still disabled on November 17.",
+    "categories": [
+      "cyber",
+      "public-services"
+    ],
+    "region": "United States",
+    "sources": [
+      {
+        "name": "Vanderbilt University",
+        "url": "https://news.vanderbilt.edu/2026/11/09/nov-9-active-cybersecurity-incident-updates/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

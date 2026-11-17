@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-15",
+  "calm": false,
+  "headline": {
+    "title": "AWS us-east-1 stumbles for three hours",
+    "quip": "Eleven services went down in the AWS region that hosts approximately everything, including the page you’d use to sign in and check. On a Sunday, so only the people paid to notice noticed.",
+    "summary": "From 3:05 to 6:10 a.m. PST, 11 AWS services in us-east-1 were disrupted, including IAM Identity Center sign-in, sign-ups, Network Load Balancers, Amazon Connect and Kiro; some load-balancer issues lasted until 6:21 a.m. AWS gave no root cause and cited no malicious activity.",
+    "categories": [
+      "tech"
+    ],
+    "region": "Global",
+    "sources": [
+      {
+        "name": "GBHackers",
+        "url": "https://gbhackers.com/aws-confirms-major-us-east-1-outage/"
+      },
+      {
+        "name": "Cyber Security News",
+        "url": "https://cybersecuritynews.com/aws-services-outage/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

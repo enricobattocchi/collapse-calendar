@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-02",
+  "calm": false,
+  "headline": {
+    "title": "The fridge hack goes on a European tour",
+    "quip": "Three weeks after France, the sequel arrives: same attack, more countries, warmer freezers.",
+    "summary": "A second wave of attacks set supermarket freezers to heat across Europe: more than 50 stores in Belgium and more than a dozen across Ireland, Estonia, the Netherlands and Luxembourg. BleepingComputer counted more than 115 stores in six countries. Danfoss and Copeland equipment was involved, and nobody has been publicly blamed for this wave.",
+    "categories": [
+      "cyber",
+      "infrastructure"
+    ],
+    "region": "Europe",
+    "sources": [
+      {
+        "name": "BBC News",
+        "url": "https://www.bbc.com/news/articles/cq1kd1nee80eo"
+      },
+      {
+        "name": "The Record",
+        "url": "https://therecord.media/cyberattack-grocery-freezers-europe"
+      },
+      {
+        "name": "BleepingComputer",
+        "url": "https://bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "Someone turns up the heat on French blood plasma",
+      "summary": "Temperature thresholds at plasma cold rooms in three French blood service (EFS) sites were raised to extremely high levels. EFS said no blood products were lost; the weakness came through a third-party component at contractor Coolworld.",
+      "categories": [
+        "cyber",
+        "public-services"
+      ],
+      "region": "France",
+      "sources": [
+        {
+          "name": "KSAT (AP)",
+          "url": "https://www.ksat.com/news/world/2026/11/04/cyberattack-hits-french-blood-bank-site-but-no-blood-products-are-compromised/"
+        },
+        {
+          "name": "POLITICO Europe",
+          "url": "https://www.politico.eu/article/fridge-hacks-hit-french-blood-banks/"
+        }
+      ]
+    },
+    {
+      "title": "A bomb threat diverts a Wizz Air flight to Budapest",
+      "summary": "A Wizz Air flight from Luton to Sofia diverted to Budapest after a bomb threat, escorted by a Hungarian Gripen. Nothing was found.",
+      "categories": [
+        "transport"
+      ],
+      "region": "Europe",
+      "sources": [
+        {
+          "name": "LBC",
+          "url": "https://www.lbc.co.uk/world-news/wizz-air-emergency-landing-budapest-bomb-threat/"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/04/bomb-threats-disrupt-flights-across-europe-no-explosive-devices-found"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

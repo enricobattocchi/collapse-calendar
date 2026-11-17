@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-02",
+  "calm": false,
+  "headline": {
+    "title": "Hundreds of French high schools close amid student protests",
+    "quip": "The protests were about too few teachers and crumbling buildings. By the end of the day, there were fewer working buildings too.",
+    "summary": "Protests over teacher shortages and run-down buildings shut or disrupted hundreds of French high schools. AFP reported almost 400 schools shut, while the education ministry said at least 564 of 3,700 were disrupted. At least 65 staff and about 170 students were injured, and more than 100 schools had severe damage.",
+    "categories": [
+      "public-services"
+    ],
+    "region": "France",
+    "sources": [
+      {
+        "name": "CP24 (AFP)",
+        "url": "https://cp24.com/news/world/2026/10/02/nearly-400-french-schools-closed-following-protests"
+      },
+      {
+        "name": "The National",
+        "url": "https://www.thenationalnews.com/news/europe/2026/10/02/hundreds-of-french-schools-close-after-youth-protests-turn-violent/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

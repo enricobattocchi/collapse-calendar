@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-04",
+  "calm": false,
+  "headline": {
+    "title": "Bangladesh’s Pathao takes its app offline after a cyber incident",
+    "quip": "The app took its own critical systems offline, which is one way to make sure nobody else can.",
+    "summary": "After a cybersecurity incident, Pathao took critical systems offline, causing service disruptions across its ride-hailing and delivery platform. Services came back shortly after, with intermittent issues. The company believes names, email addresses and phone numbers were obtained.",
+    "categories": [
+      "cyber",
+      "transport"
+    ],
+    "region": "Bangladesh",
+    "sources": [
+      {
+        "name": "Pathao",
+        "url": "https://pathao.com/blog/pathao-cybersecurity-incident-faqs-and-safety-guidance/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

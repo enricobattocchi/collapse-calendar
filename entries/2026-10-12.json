@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-12",
+  "calm": false,
+  "headline": {
+    "title": "A cyberattack takes Stop & Shop and Albert Heijn ordering offline",
+    "quip": "The stores stayed open, so the oldest grocery technology, walking in, outlasted the newest.",
+    "summary": "A cyberattack on Ahold Delhaize took down websites and apps for Stop & Shop, Food Lion, Hannaford, Giant and Albert Heijn, suspending online ordering and delivery while stores stayed open. CEO Frans Muller blamed “malicious actions of others,” and the company said it saw no link to the French fridge attacks. Ahold expects fourth-quarter sales to fall by up to €250 million.",
+    "categories": [
+      "cyber",
+      "tech"
+    ],
+    "region": "United States and Europe",
+    "sources": [
+      {
+        "name": "The Record",
+        "url": "https://therecord.media/ahold-delhaize-cyberattack-grocery"
+      },
+      {
+        "name": "KSAT (AP)",
+        "url": "https://www.ksat.com/news/world/2026/11/04/cyberattack-hits-french-blood-bank-site-but-no-blood-products-are-compromised/"
+      }
+    ]
+  },
+  "also": [],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

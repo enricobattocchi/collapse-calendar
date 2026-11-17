@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-21",
+  "calm": false,
+  "headline": {
+    "title": "A PHP flaw takes websites offline around the world",
+    "quip": "Security agencies advised going offline until patched, so part of the web secured itself the old-fashioned way: by not being there.",
+    "summary": "The PHP team released patches for a critical flaw nicknamed PHP2Shell. CERT-EU, the UK NCSC and the NSA advised taking vulnerable systems offline until patched, and sites including Pinboard, parts of Wikipedia, 4chan and Something Awful went offline. PHP runs about 69% of websites, according to W3Techs.",
+    "categories": [
+      "cyber",
+      "tech"
+    ],
+    "region": "Global",
+    "sources": [
+      {
+        "name": "NBC News",
+        "url": "https://www.nbcnews.com/tech/security/critical-vulnerabilities-php-update-systems-rcna604751"
+      },
+      {
+        "name": "Wikipedia: Current events, October 2026",
+        "url": "https://en.wikipedia.org/wiki/Portal:Current_events/October_2026"
+      }
+    ]
+  },
+  "also": [
+    {
+      "title": "Orange’s mobile network fails across France",
+      "summary": "From about 11:20 CEST, Orange and Sosh customers across France lost calls, texts and data, with about 12,000 Downdetector reports. No cause was given.",
+      "categories": [
+        "tech"
+      ],
+      "region": "France",
+      "sources": [
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/orange-mobile-outage-france"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "needed": false,
+    "reasons": [
+      "Backfilled during setup and reviewed by the owner."
+    ]
+  }
+}

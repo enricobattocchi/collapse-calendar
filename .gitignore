@@ -3,3 +3,4 @@ node_modules/
 .wrangler/
 wrangler/.domains.*
 .DS_Store
+_og/

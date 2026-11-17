@@ -72,7 +72,7 @@ const doorWear = (date) => wearOf(dayN(date));
 const FONTS =
   "https://fonts.googleapis.com/css2?family=Shrikhand&family=Fraunces:ital,wght@1,500&family=Oswald:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap";
 
-function layout({ title, description, prefix, body, path, bodyClass, base = site.siteUrl }) {
+function layout({ title, description, prefix, body, path, bodyClass, base = site.siteUrl, image, imageAlt, siteName = site.title, type = "website" }) {
   const url = `${base}/${path}`;
   return `<!doctype html>
 <html lang="en">
@@ -81,11 +81,22 @@ function layout({ title, description, prefix, body, path, bodyClass, base = site
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+<meta property="og:site_name" content="${esc(siteName)}">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="${type}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
-<meta property="og:type" content="website">
 <meta property="og:url" content="${esc(url)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${esc(image)}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(imageAlt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${esc(image)}">
+<meta name="twitter:image:alt" content="${esc(imageAlt)}">
 <link rel="canonical" href="${esc(url)}">
 <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="${esc(site.title)}" href="${CAL_URL}feed.xml">
@@ -327,7 +338,7 @@ ${lights()}
   </footer>
 </div>
 </div>`;
-  return layout({ title: site.title, description: site.tagline, prefix: "", body, path: "", bodyClass: "cal" });
+  return layout({ title: site.title, description: site.tagline, prefix: "", body, path: "", bodyClass: "cal", image: `${site.siteUrl}/og/home.png`, imageAlt: `${site.title}: a grid of advent calendar doors, each one a real disruption.` });
 }
 
 // ---------- door page ----------
@@ -408,6 +419,9 @@ function dayPage(e, prev, next) {
     body,
     path: `day/${e.date}/`,
     bodyClass: "cal",
+    type: "article",
+    image: `${site.siteUrl}/og/${e.date}.png`,
+    imageAlt: `${pillDate(e.date)}: ${e.headline.title}`,
   });
 }
 
@@ -438,6 +452,7 @@ function severity(cat, date, byDate) {
   return "op";
 }
 
+const statusSnapshot = {};
 function statusPage() {
   const prefix = "";
   const byDate = Object.fromEntries(entries.map((e) => [e.date, e]));
@@ -461,6 +476,7 @@ function statusPage() {
     return { ...c, bars, cur, pct, bad };
   });
   const majors = comps.filter((c) => c.cur === "major");
+  statusSnapshot.comps = comps;
   const worst = comps.reduce((w, c) => worse(w, c.cur), "op");
   const banner =
     majors.length >= 2
@@ -470,6 +486,7 @@ function statusPage() {
         : worst !== "op"
           ? { bg: "#B45309", text: `${SEV[worst].l} across some systems` }
           : { bg: "#1E7F4F", text: "All systems operational. Suspiciously." };
+  statusSnapshot.banner = banner;
 
   const compRow = (name, status, color, bars, aria, uptime) => `<div class="comp">
       <div class="comp-head"><span class="comp-name">${esc(name)}</span><span class="comp-status" style="color:${color}">${esc(status)}</span></div>
@@ -537,7 +554,7 @@ function statusPage() {
   </section>
   <footer class="s-footer">Society Status is a parody of a service status page. The incidents are real, and each one cites its news sources. Not affiliated with any company named here.</footer>
 </main>`;
-  return layout({ title: `Society Status · ${site.shortTitle}`, description: banner.text, prefix, body, path: "", bodyClass: "status", base: site.statusUrl });
+  return layout({ title: "Society Status", description: `${banner.text}. A parody status page for real disruptions, with sources.`, prefix, body, path: "", bodyClass: "status", base: site.statusUrl, siteName: "Society Status", image: `${site.statusUrl}/og.png`, imageAlt: `Society Status: ${banner.text}` });
 }
 
 // ---------- feeds ----------
@@ -573,4 +590,71 @@ writeFileSync(join(OUT, "feed.xml"), feed());
 writeFileSync(join(OUT, "doors.json"), JSON.stringify(entries.map(({ file, review, ...e }) => e), null, 2));
 for (const dir of [OUT, OUT_STATUS])
   for (const file of ["style.css", "app.js", "favicon.svg"]) copyFileSync(join(ROOT, "src", file), join(dir, file));
+// ---------- social preview cards (rendered to PNG by scripts/og.mjs) ----------
+const OG_SRC = join(ROOT, "_og");
+const cardShell = (inner, bg) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>
+*{box-sizing:border-box}html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{background:${bg};font-family:"Public Sans",system-ui,sans-serif;color:#F6E9C6}
+.gift{display:block;width:100%;height:100%}
+</style></head><body>${inner}</body></html>`;
+const navyBg = (a) => `${mix("#16305A", "#3E465A", a)} radial-gradient(circle at 20% 30%, rgba(255,215,120,.35) 0 1.5px, transparent 2.5px) 0 0/34px 30px`;
+const brandLine = (url) => `<div style="position:absolute;left:56px;right:56px;bottom:38px;display:flex;justify-content:space-between;align-items:baseline">
+<span style="font:400 30px Shrikhand,Georgia,serif;color:#FFE9A8">The Advent Calendar of Societal Collapse</span>
+<span style="font:600 20px Oswald,sans-serif;letter-spacing:.08em;color:#EBD9B0">${esc(url.replace("https://", ""))}</span></div>`;
+
+function ogDoor(e) {
+  const w = doorWear(e.date);
+  const kind = kindOf(e);
+  const title = e.headline.title;
+  const size = title.length > 70 ? 46 : title.length > 45 ? 54 : 62;
+  return cardShell(`<div style="position:absolute;left:56px;top:56px;width:330px;height:430px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#2A1A12,#3E271B);box-shadow:inset 0 10px 22px rgba(0,0,0,.65)">
+  <div style="position:absolute;left:0;right:0;top:0;height:26px;background:${inkOf(e.date)};clip-path:polygon(0 0,100% 0,100% 55%,90% 100%,78% 45%,64% 90%,50% 35%,36% 95%,22% 50%,10% 95%,0 60%)"></div>
+  <div style="position:absolute;left:25px;right:25px;top:70px;height:250px">${gift(kind, w)}</div>
+  <div style="position:absolute;left:50%;bottom:30px;transform:translateX(-50%);padding:8px 18px 7px;border-radius:999px;background:${mix("#FFF6DE", "#E4D2AE", w)};color:#1E1914;font:600 38px/1 Oswald,sans-serif;letter-spacing:.06em;white-space:nowrap">${pillDate(e.date)}</div>
+</div>
+<div style="position:absolute;left:430px;right:56px;top:56px;height:430px;display:flex;flex-direction:column;justify-content:center;gap:22px">
+  <div><span style="display:inline-block;padding:5px 12px 4px;border-radius:4px;background:${TAG_BG[kind]};color:#fff;font:500 22px Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase">${esc(catLabel(e))}</span></div>
+  <div style="font-weight:800;font-size:${size}px;line-height:1.06;letter-spacing:-.01em;color:#FFF4DA">${esc(title)}</div>
+  <div style="font:italic 500 26px/1.3 Fraunces,Georgia,serif;color:#EBDDB8;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(e.headline.quip)}</div>
+</div>
+${brandLine(site.siteUrl)}`, navyBg(boardAge));
+}
+
+function ogHome() {
+  const recent = doors.slice(-6);
+  const tiles = recent
+    .map((e) => `<div style="flex:1;height:170px;border-radius:10px;background:${inkOf(e.date)};box-shadow:inset 0 0 0 3px rgba(255,240,200,.5),0 6px 10px rgba(0,0,0,.4);position:relative;transform:rotate(${f((seedOf(e.date) - 0.5) * doorWear(e.date) * 8)}deg)">
+<span style="position:absolute;left:50%;top:28px;width:56px;height:56px;margin-left:-28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF2B8,#E2B84F 45%,#9C7424)"></span>
+<span style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);padding:5px 12px 4px;border-radius:999px;background:#FFF6DE;color:#1E1914;font:600 22px/1 Oswald,sans-serif;letter-spacing:.06em;white-space:nowrap">${pillDate(e.date)}</span></div>`)
+    .join("");
+  return cardShell(`<div style="position:absolute;left:56px;right:56px;top:48px">
+<div style="font:500 20px Oswald,sans-serif;letter-spacing:.2em;color:#EBD9B0">ONE REAL DISRUPTION A DAY · EVERY DOOR CITES ITS SOURCES</div>
+<div style="margin-top:14px;font:400 76px/1.02 Shrikhand,Georgia,serif;color:#FFE9A8;text-shadow:0 4px 0 #8E1B22">The Advent Calendar<br>of Societal Collapse</div>
+<div style="display:flex;gap:22px;margin-top:40px">${tiles}</div></div>
+<div style="position:absolute;left:56px;right:56px;bottom:30px;display:flex;justify-content:space-between;font:600 20px Oswald,sans-serif;letter-spacing:.08em;color:#EBD9B0"><span>“…AN ADVENT CALENDAR OF SOCIETAL COLLAPSE.” · JON STEWART</span><span>${esc(site.siteUrl.replace("https://", ""))}</span></div>`, navyBg(boardAge));
+}
+
+function ogStatus() {
+  const { banner, comps = [] } = statusSnapshot;
+  const SEVC = { op: "#3BA55C", degraded: "#E9B949", partial: "#F08C2E", major: "#D93025" };
+  const rows = [...comps.slice(0, 5).map((c) => ({ name: c.name, status: SEV[c.cur].l, color: SEV[c.cur].tc, cur: c.cur })), { name: "Shared sense of reality", status: "Major outage", color: SEV.major.tc, cur: "major" }]
+    .map((r) => `<div style="display:flex;justify-content:space-between;padding:13px 26px;border-top:1px solid #EEF0F3;font-size:22px"><span style="font-weight:600">${esc(r.name)}</span><span style="font-weight:600;color:${r.color}">${esc(r.status)}</span></div>`)
+    .join("");
+  return cardShell(`<div style="font-family:Inter,system-ui,sans-serif;color:#1D2026;padding:44px 56px">
+<div style="display:flex;align-items:center;gap:14px;font-weight:700;font-size:34px"><svg width="40" height="40" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13" fill="none" stroke="#1D2026" stroke-width="2.2"/><path d="M15 2 L13 10 L17 14 L12 20 L15 28" fill="none" stroke="#D93025" stroke-width="2.2" stroke-linejoin="round"/></svg>Society Status</div>
+<div style="margin-top:24px;padding:20px 26px;border-radius:10px;background:${banner?.bg ?? "#C62828"};color:#fff;font-weight:700;font-size:32px">${esc(banner?.text ?? "Major outage across multiple systems")}</div>
+<div style="margin-top:20px;background:#fff;border:1px solid #E3E5EA;border-radius:10px">${rows}</div>
+<div style="margin-top:16px;font-size:18px;color:#5C6370">${esc(site.statusUrl.replace("https://", ""))} · a parody status page for real disruptions</div></div>`, "#F6F7F9");
+}
+
+rmSync(OG_SRC, { recursive: true, force: true });
+mkdirSync(OG_SRC, { recursive: true });
+const ogJobs = [
+  { src: "home.html", out: join(OUT, "og", "home.png"), html: ogHome() },
+  { src: "status.html", out: join(OUT_STATUS, "og.png"), html: ogStatus() },
+  ...entries.map((e) => ({ src: `${e.date}.html`, out: join(OUT, "og", `${e.date}.png`), html: ogDoor(e) })),
+];
+for (const job of ogJobs) writeFileSync(join(OG_SRC, job.src), job.html);
+writeFileSync(join(OG_SRC, "manifest.json"), JSON.stringify(ogJobs.map(({ src, out }) => ({ src: join(OG_SRC, src), out })), null, 2));
+
 console.log(`Built ${entries.length} doors into _site/ (calendar age ${f(boardAge)}).`);

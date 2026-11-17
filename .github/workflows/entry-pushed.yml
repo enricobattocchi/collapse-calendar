@@ -1,0 +1,16 @@
+# Unprivileged signal: the daily routine pushed a claude/entry-* branch.
+# It runs nothing from the branch. The privileged intake.yml reacts to this run through
+# workflow_run, which always uses the workflow definition on the default branch.
+name: Entry pushed
+
+on:
+  push:
+    branches: ["claude/entry-*"]
+
+permissions: {}
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Received ${{ github.sha }}"

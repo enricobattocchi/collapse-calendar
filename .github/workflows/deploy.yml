@@ -27,6 +27,8 @@ jobs:
           node-version: 22
       - run: node scripts/validate.mjs
       - run: node scripts/build.mjs
+      - name: Render social preview images
+        run: node scripts/og.mjs
       - name: Deploy the calendar
         uses: cloudflare/wrangler-action@v4
         with:

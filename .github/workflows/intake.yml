@@ -2,14 +2,17 @@
 # Safe entries go straight to main and deploy; anything else becomes a pull request
 # assigned to the repository owner, which triggers a GitHub notification.
 #
-# Security: the routine reads untrusted web content, so its branch is never executed.
-# This job checks out main (trusted code), copies in only the branch's added or modified
-# entries/*.json files, and runs main's validator, review gate and build on them.
+# Security: the routine reads untrusted web content, so nothing from its branch is executed.
+# - This workflow runs on workflow_run, so its definition always comes from main.
+# - It checks out main, copies in only the branch's added or modified entries/*.json blobs,
+#   and runs main's validator, review gate and build on them.
+# - Auto-publish commits exactly those validated files onto main; it never merges the branch.
 name: Intake daily entry
 
 on:
-  push:
-    branches: ["claude/entry-*"]
+  workflow_run:
+    workflows: ["Entry pushed"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -18,16 +21,23 @@ permissions:
   actions: write
 
 concurrency:
-  group: intake-${{ github.ref }}
+  group: intake-${{ github.event.workflow_run.head_branch }}
   cancel-in-progress: true
 
 jobs:
   intake:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push'
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      BRANCH: ${{ github.ref_name }}
+      BRANCH: ${{ github.event.workflow_run.head_branch }}
+      SHA: ${{ github.event.workflow_run.head_sha }}
     steps:
+      - name: Validate the branch name and commit
+        run: |
+          [[ "$BRANCH" =~ ^claude/entry-[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "Unexpected branch name"; exit 1; }
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Unexpected commit"; exit 1; }
+
       - name: Check out trusted main
         uses: actions/checkout@v4
         with:
@@ -39,14 +49,19 @@ jobs:
 
       - name: Copy the branch's entry files into the trusted tree
         run: |
-          git fetch origin "refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
-          git diff --name-status --no-renames origin/main...origin/"$BRANCH" > "$RUNNER_TEMP/changes.txt"
+          git fetch origin "$SHA"
+          git diff --name-status --no-renames "origin/main...$SHA" > "$RUNNER_TEMP/changes.txt"
           cat "$RUNNER_TEMP/changes.txt"
+          : > "$RUNNER_TEMP/files.txt"
           while IFS=$'\t' read -r status path; do
             case "$status" in A|M) ;; *) continue ;; esac
             [[ "$path" =~ ^entries/[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$ ]] || continue
-            git show "origin/$BRANCH:$path" > "$path"
-          done < "$RUNNER_TEMP/changes.txt"
+            # Only regular files: a symlink or other mode makes the gate fail later.
+            mode=$(git ls-tree "$SHA" -- "$path" | cut -d' ' -f1)
+            if [ "$mode" != "100644" ]; then echo "X	$path" >> "$RUNNER_TEMP/changes.txt"; continue; fi
+            git show "$SHA:$path" > "$path"
+            echo "$path" >> "$RUNNER_TEMP/files.txt"
+          done < <(cat "$RUNNER_TEMP/changes.txt")
 
       - name: Decide whether the entry needs review
         id: gate
@@ -60,9 +75,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -- .
-          git clean -fdq entries/
-          git merge --squash "origin/$BRANCH"
+          xargs -a "$RUNNER_TEMP/files.txt" git add --
           git commit -m "Publish ${BRANCH#claude/entry-}"
           git push origin main
           git push origin --delete "$BRANCH"

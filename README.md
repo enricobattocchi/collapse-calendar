@@ -52,7 +52,7 @@ python3 -m http.server 8765 --directory _site
 | `entries/` | One JSON file per door. The format is in `ROUTINE.md`. |
 | `site.json` | Title, site URLs, Cloudflare project names, Jon Stewart quote. |
 | `ROUTINE.md` | Instructions that the daily routine follows. |
-| `scripts/` | Build, gift drawings, validator, and review gate. |
+| `scripts/` | Build, gift drawings, social preview renderer (`og.mjs`, needs Chrome), validator, and review gate. |
 | `src/` | Stylesheet, script, and icon. |
 
 ## Hosting

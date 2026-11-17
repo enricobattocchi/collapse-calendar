@@ -496,7 +496,7 @@ function statusPage() {
     )
     .join("\n");
   const jokeBars = Array.from({ length: SPAN }, () => `<span style="background:${SEV.major.c}"></span>`);
-  const joke = compRow("Shared sense of reality", "Major outage", SEV.major.tc, jokeBars, "Shared sense of reality: major outage every day", "0% of days without incident");
+  const joke = compRow("Public trust in institutions", "Major outage", SEV.major.tc, jokeBars, "Public trust in institutions: major outage every day", "0% of days without incident");
 
   // A status page stands on its own: incidents cite news sources, not calendar doors.
   const incident = (it, date, major) => `<div class="inc">
@@ -649,7 +649,7 @@ function ogStatus() {
     ["Power, water and supply chains", "degraded"],
     ["Cybersecurity", "major"],
   ];
-  const rows = [...FIXED.map(([name, cur]) => ({ name, status: SEV[cur].l, color: SEV[cur].tc })), { name: "Shared sense of reality", status: "Major outage", color: SEV.major.tc }]
+  const rows = [...FIXED.map(([name, cur]) => ({ name, status: SEV[cur].l, color: SEV[cur].tc })), { name: "Public trust in institutions", status: "Major outage", color: SEV.major.tc }]
     .map((r) => `<div style="display:flex;justify-content:space-between;padding:13px 26px;border-top:1px solid #EEF0F3;font-size:22px"><span style="font-weight:600">${esc(r.name)}</span><span style="font-weight:600;color:${r.color}">${esc(r.status)}</span></div>`)
     .join("");
   return cardShell(`<div style="font-family:Inter,system-ui,sans-serif;color:#1D2026;padding:44px 56px">

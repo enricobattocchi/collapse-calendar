@@ -30,8 +30,8 @@ export function entryFiles() {
 
 export function loadEntries() {
   return entryFiles().map((f) => ({
-    file: f,
     ...JSON.parse(readFileSync(join(ENTRIES_DIR, f), "utf8")),
+    file: f,
   }));
 }
 

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Wednesday, by the archivist’s count",
+    "quip": "No grounded fleets, no dark networks, no emergency status pages. The infrastructure is presumably saving its strength.",
+    "summary": "The archivist found no major disruption that began on November 18 and could be verified with two independent sources. Earlier incidents, including the NSA network outage and the FAA ground stop aftermath, were still in the news.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": { "needed": false, "reasons": [] }
+}

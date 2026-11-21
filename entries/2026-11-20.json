@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-20",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Friday, with some paperwork outstanding",
+    "quip": "Nothing new collapsed today, which leaves the systems free to spend the weekend drafting their post-incident reports.",
+    "summary": "The archivist found no major disruption that began on November 20 and could be verified with two independent sources. Some source pages could not be opened during research.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": {
+    "needed": true,
+    "reasons": [
+      "Web searches surfaced no disruption starting on November 20, but a source page could not be opened (network restriction), so the search was incomplete.",
+      "A Microsoft final report on the November 12-13 outage was reportedly due November 20; it was not verified and is not a new disruption."
+    ]
+  }
+}

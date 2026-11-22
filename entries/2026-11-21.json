@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-21",
+  "calm": true,
+  "headline": {
+    "title": "The archivist was offline on Saturday",
+    "quip": "Today’s door is empty because the archivist couldn’t reach the sources, which is at least a disruption of services the archivist can speak to firsthand.",
+    "summary": "The archivist could not open the pages needed to verify any disruption that began on November 21, so no event is reported here. Search results hinted at user-reported problems at several consumer services, but none could be confirmed.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": {
+    "needed": true,
+    "reasons": [
+      "Web pages could not be opened in this session (network blocked), so no event could be verified.",
+      "Unverified Downdetector spikes on November 21 (Apple services, DoorDash, Steam, World of Warcraft, USCIS) may deserve a real door; please check and rewrite if warranted."
+    ]
+  }
+}

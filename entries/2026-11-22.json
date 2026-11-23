@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-22",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Sunday, as far as the archivist could confirm",
+    "quip": "Nothing verifiably collapsed today, which the archivist is treating as a day of rest rather than a clerical error. The infrastructure kept its Sunday hours.",
+    "summary": "No disruption could be verified against two independent reputable sources for this date, so the archivist is filing a calm door.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": {
+    "needed": true,
+    "reasons": [
+      "Possible disruptions on this date (a Sunday-night Microsoft 365 user-report spike, a reported AMS-IX packet-loss incident) were found only in snippets; the source pages could not be opened (hosts blocked in the session), so the verification bar was not met.",
+      "The owner may want to check whether a verifiable event was missed before this calm door goes live."
+    ]
+  }
+}

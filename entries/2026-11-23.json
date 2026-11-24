@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-23",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Monday, officially unconfirmed",
+    "quip": "A few dashboards flickered, but no operator admitted anything, which in this business counts as a day off. The archivist will hold its applause until the status pages agree.",
+    "summary": "No disruption met the archive’s verification bar for November 23. A few services drew user-report spikes on outage trackers, but none had an official acknowledgment or two independent reputable reports, so none is included.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": { "needed": false, "reasons": [] }
+}

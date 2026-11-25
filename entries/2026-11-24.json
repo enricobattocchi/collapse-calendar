@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-24",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Tuesday, as far as the archivist can see",
+    "quip": "The archivist’s connection to the outside world was down today, which makes it the one outage nobody can report on.",
+    "summary": "The archivist could not open the sources needed to verify the day’s events, so this door makes no factual claims about November 24.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": {
+    "needed": true,
+    "reasons": [
+      "Source pages could not be opened (network access to news sites failed), so nothing could be verified.",
+      "Search snippets suggested a brief Spotify outage and a TikTok outage on November 24; neither was verified against the original reporting.",
+      "This calm door may hide real disruptions; consider replacing it with a researched entry."
+    ]
+  }
+}

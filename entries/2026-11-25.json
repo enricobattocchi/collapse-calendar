@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-25",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Wednesday, pending paperwork",
+    "quip": "The archivist spotted a few headlines about offline systems, but couldn’t get the pages to open. Without a source, they’re filed under rumor, which is where the status pages usually put them too.",
+    "summary": "No disruption for November 25 could be verified to the archive’s standard. Search results pointed to several cyber incidents, but the archivist couldn’t open the original reports, so none is included.",
+    "categories": ["meta"],
+    "region": "Global",
+    "sources": []
+  },
+  "also": [],
+  "review": {
+    "needed": true,
+    "reasons": [
+      "Web search returned headlines of possible November 25 incidents (myColorado app cyberattack, FinCEN systems offline, a Guadeloupe hospital ransomware attack, Turnitin, Rackspace Spot), but the source pages could not be opened, so none met the verification bar.",
+      "The Guadeloupe hospital item involves patients and may deserve a factual-only entry if verified by the owner."
+    ]
+  }
+}

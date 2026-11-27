@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-26",
+  "calm": true,
+  "headline": {
+    "title": "A quiet Thanksgiving, by the archivist’s count",
+    "quip": "No verified collapses today, which the archivist is treating as the nation’s one successful holiday rollout. The routers, presumably, are also sitting down to dinner.",
+    "summary": "The archivist found no verified, widely reported service disruption that began on this date. Searches turned up only unrelated or unconfirmed items.",
+    "categories": ["meta"],
+    "region": "United States",
+    "sources": []
+  },
+  "also": [],
+  "review": {
+    "needed": true,
+    "reasons": [
+      "Web searches for November 26 returned no corroborated disruption; one vendor marketing page claimed a global routing outage but could not be verified, so it was left out.",
+      "Search coverage was thin, so a real event may have been missed."
+    ]
+  }
+}
